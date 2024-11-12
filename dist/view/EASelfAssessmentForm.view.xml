@@ -1,0 +1,114 @@
+<mvc:View controllerName="easelfassessment.controller.EASelfAssessmentForm"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+         <VBox width="auto" class="sapUiLargeMargin">
+                
+                <!-- Title -->
+                <Title text="EA Self Assessment Form Instructions" level="H1" class="sapUiSmallMarginTop"  />
+                <Title text="(version 1.0.5)"/>
+                
+                <!-- Instructions Text -->
+                <Text text="** This assessment is not for German colleagues. **" class="sapUiSmallMarginTop"  />
+                <Text text="Please follow the below instructions carefully and submit your self-assessment." class="subheadings sapUiMediumMarginTop"/>
+                <!-- Levels Description -->
+                
+                <!-- Section Header -->
+                <Title text="Fill Your Details" level="H2" class="subheadings sapUiMediumMarginTop" />
+                
+                <!-- Input Field for Employee ID -->
+                <Label required="true" text="Employee ID" />
+                <Input id="employeeIDInput" required="true" placeholder="Enter text" width="50%" />
+
+                <Label required="true" text="Firstname Lastname" />
+                <Input id="employeeSurname" required="true" placeholder="Enter text" width="50%" />
+
+                <Label required="true" text="Region" />
+                <Input required="true" id="employeeRegion" placeholder="Enter text" width="50%" />
+
+                <Label text="Country" />
+                <Input id="employeeCountryt" placeholder="Enter text" width="50%" />
+
+                <Label text="Email" />
+                <Input id="employeeEmailt" placeholder="Enter text" width="50%" />
+
+                <!-- Section Header -->
+                <Title text="Fill Your Customer Engagements"  class="subheadings sapUiMediumMarginTop" />
+                <!-- Instructions Text -->
+                <Text text="- Customers that you worked or are currently working on (during your overall professional career, not only at SAP)." />
+                <Text text="- Find the CRM ID from the Cloud Reporting Tool https://reporting.ondemand.com/sap/crp/cdo " />
+                <Text text="- Set ”Active” flag for the active engagement and leave it unchecked for the past." />
+                <Text text="- Set the “Shadowing” flag for the engagement your are acting as a shadow EA and leave it unchecked if otherwise." />
+                <Text text="- Put the name of the “shadowed” EA in the comments field in case of shadowing." />
+                <Text text="- Click on '+' button to add a new entry in the table." />
+                <Table id="tableId1" width="100%" mode="Delete" delete="deleteRow">
+							<headerToolbar>
+								<Toolbar> <Text text="Customer Engagements"/>
+									<ToolbarSpacer></ToolbarSpacer>
+									<Button icon="sap-icon://add" type="Emphasized" press="onAdd"/>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column width="50%">
+									<Text text="Customer Name"/>
+								</Column>
+								<Column width="20%">
+									<Text text="CRM ID"/>
+								</Column>
+								<Column width="20%">
+									<Text text="Active Engagement"/>
+								</Column>
+								<Column width="20%">
+									<Text text="Shadowing"/>
+								</Column>
+                                <Column width="40%">
+									<Text text="Shadow EA"/>
+								</Column>
+                                <Column width="50%">
+									<Text text="Comment"/>
+								</Column>
+							</columns>
+						</Table>
+
+                        <!-- Section Header -->
+                <Title text="Fill Your Skills"  class="subheadings sapUiMediumMarginTop" />
+                <!-- Instructions Text -->
+                <Text text="Skills assessment is based on both TOGAF Skills and SAP Skills." />
+                <Text text="TOGAF Skills" class="subheadings sapUiMediumMarginTop"/>
+                <Text text="   - Enterprise Architecture" />
+                <Text text="   - Business" />
+                <Text text="   - Technical IT Skills" />
+                <Text text="   - Program and Project Management Skills" />
+                <Text text="   - Generic" />
+                <Text text="   - Legal Environment" />
+                <Text text="   - General IT Knowledge Skills" />
+                <Text text="SAP Skills" class="subheadings sapUiMediumMarginTop"/>
+                <Text text="   - North Star Services" />
+                <Text text="   - LoB Skills" />
+                <Text text="   - Industry Skills" />
+                <Text text="   - SAP Product Skills" />
+               <Title text="Skill Levels"  class="subheadings sapUiMediumMarginTop" />
+                <Text text="Beginner: Level1 - Basic Knowledge" class="sapUiSmallMarginTop" />
+                <Text text="Intermediate: Level2 - Understands the background. Issues and implications sufficiently to be able to understand how to proceed further. Can contribute to the topic but need some guidance in delivery." class="sapUiSmallMarginTop" />
+                <Text text="Expert: Level3 - Extensive and substantial practical experience and applied knowledge on the subject. Confident delivery and leading others." class="sapUiSmallMarginTop" />
+            </VBox>
+
+        
+            <IconTabBar id="idIconTabBar" expanded="true" class="sapUiResponsiveContentPadding"/>
+
+
+        </content>
+        	<footer>
+			<OverflowToolbar id="otbFooter">
+				<ToolbarSpacer/>
+				<Button type="Accept" press="onSubmit" text="Submit">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+				</Button>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>
+
+
+
